@@ -35,17 +35,15 @@ const formCommon = document.getElementById('form-common');
 formCommon.addEventListener('submit', (event) => {
     event.preventDefault();
     validate(formCommon);
+
     const fields = { ...getCommonValues('common'), ...getAdditionalValues() };
 
     const testingCreationTimeWithoutRisks = (fields.testCasesCount * fields.creationTimeForOneTC) + fields.testPlanCreationTime;
     const testingExecutionTimeWithoutRisks = getTestingTimeWithoutRisks(fields);
     const testingTime = (testingCreationTimeWithoutRisks + testingExecutionTimeWithoutRisks) / fields.teamMembersCount;
-
     const resultWithoutRisks = testingTime + fields.envInstallationTime + fields.buildInstallationTime;
 
     const result = getResultWithRisks(getResultWithRisks(resultWithoutRisks, fields.communicationTimePercent), fields.risksPercent);
-
-    console.log('result', result);
 
     document.getElementById('result-common').innerText = `${result.toFixed(2)}  h`;
 });

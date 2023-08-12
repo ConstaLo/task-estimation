@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Estimation</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header">Estimation</h1>
+    </header>
+    <main>
+        <div class="forms">
+            <div class="form-container">
+                <h1>Module testing</h1>
+                <form id="form-module" action="none">
+                    <div class="form-component-container module-testing">
+                        <div class="input-container">
+                            <label for="test-cases-count">Test Cases Count</label>
+                            <input type="text" name="Test Cases Count" id="test-cases-count-module">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="exec-time-for-1-tc">One Test Case Execution time, <strong>min</strong></label>
+                            <input type="text" name="One Test Case Execution time" id="exec-time-for-1-tc-module">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="browsers-count">Browsers Count</label>
+                            <input type="text" name="Browsers Count" id="browsers-count-module">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="average-defects-percent">Average defects, <strong>%</strong></label>
+                            <input type="text" name="Average defects percent" id="average-defects-percent-module">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="defect-reporting-time-for-1-de">One Defect Reporting time,
+                                <strong>min</strong></label>
+                            <input type="text" name="One Defect Reporting time"
+                                id="defect-reporting-time-for-1-de-module">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="test-result-report-time">Test result report creation time,
+                                <strong>h</strong></label>
+                            <input type="text" name="Test result report creation time"
+                                id="test-result-report-time-module">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="percent-time-for-risks">Time for risks, <strong>%</strong></label>
+                            <input type="text" name="Time for risks (%)" id="percent-time-for-risks-module">
+                        </div>
+
+                    </div>
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+
+            <div class="form-container">
+                <form id="form-common">
+                    <h1>Common testing</h1>
+                    <div class="form-component-container common-testing">
+                        <div class="input-container">
+                            <label for="test-cases-count">Test Cases Count</label>
+                            <input type="text" name="Test Cases Count" id="test-cases-count-common">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="exec-time-for-1-tc">One Test Case Execution time, <strong>min</strong></label>
+                            <input type="text" name="One Test Case Execution time" id="exec-time-for-1-tc-common">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="browsers-count">Browsers Count</label>
+                            <input type="text" name="Browsers Count" id="browsers-count-common">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="average-defects-percent">Average defects, <strong>%</strong></label>
+                            <input type="text" name="Average defects percent" id="average-defects-percent-common">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="defect-reporting-time-for-1-de">One Defect Reporting time,
+                                <strong>min</strong></label>
+                            <input type="text" name="One Defect Reporting time"
+                                id="defect-reporting-time-for-1-de-common">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="test-result-report-time">Test result report creation time,
+                                <strong>h</strong></label>
+                            <input type="text" name="Test result report creation time"
+                                id="test-result-report-time-common">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="percent-time-for-risks">Time for risks, <strong>%</strong></label>
+                            <input type="text" name="Time for risks (%)" id="percent-time-for-risks-common">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="test-plan-creation-time">Test plan creation time, <strong>h</strong></label>
+                            <input type="text" name="Test plan creation time (h)" id="test-plan-creation-time">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="creation-time-for-1-tc">One test case creation time,
+                                <strong>min</strong></label>
+                            <input type="text" name="One test case creation time" id="creation-time-for-1-tc">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="team-members-count">Team members count</label>
+                            <input type="text" name="Team members count" id="team-members-count">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="env-install-time">Environment installation time, <strong>h</strong></label>
+                            <input type="text" name="Environment installation time" id="env-install-time">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="build-install-time">Build installation time, <strong>min</strong></label>
+                            <input type="text" name="Build installation time" id="build-install-time">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="communication-time">Time for communication, <strong>%</strong></label>
+                            <input type="text" name="Time for communication (%)" id="communication-time">
+                        </div>
+                    </div>
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+        </div>
+
+        <div class="result">
+            <div>
+                <strong>Result for module testing: </strong>
+                <strong class="result-field" id="result-module"></strong>
+            </div>
+            <div>
+                <strong>Result for common testing: </strong>
+                <strong class="result-field" id="result-common"></strong>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

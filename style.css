@@ -1,0 +1,52 @@
+.header {
+    text-align: center;
+    background-color: #c8cffa;
+    text-transform: uppercase;
+}
+
+form { 
+    display: flex;
+    flex-direction: column;
+}
+
+.forms {
+    display: flex;
+}
+.common-inputs {
+    background-color: bisque;
+}
+
+.additional-inputs {
+    background-color: blueviolet;
+}
+
+.input-container > label {
+    text-transform: capitalize
+}
+
+.input-container {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-component-container> :nth-child(odd){
+    background-color: #c8cffa;
+}
+
+input[type=submit] {
+    padding: 10px;
+    background-color:#b4fdc8;
+    text-decoration: solid;
+    border-radius: 20px;
+    
+}
+
+.error {
+    background-color: rgb(254, 149, 149);
+}
+
+.result-field {
+    font-size: 24px;
+    background-color: #b4fdc8;
+}

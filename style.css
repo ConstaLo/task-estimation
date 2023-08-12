@@ -12,6 +12,13 @@ form {
 .forms {
     display: flex;
 }
+
+@media (max-width: 700px) {
+    .forms {
+        flex-direction: column;
+    }
+}
+
 .common-inputs {
     background-color: bisque;
 }

@@ -1,5 +1,5 @@
 const getTestingExecutionTime = ({ testCasesCount, execTimeForOneTC, browsersCount }) => testCasesCount * execTimeForOneTC * browsersCount;
-const getDefectsCount = ({ testCasesCount, avgDefectPercent, browsersCount }) => testCasesCount * (avgDefectPercent / 100) * browsersCount;
+const getDefectsCount = ({ testCasesCount, avgDefectPercent }) => testCasesCount * (avgDefectPercent / 100);
 const getDefectReportingTime = ({ defectsCount, timeForOneDefect }) => defectsCount * timeForOneDefect;
 const getResultWithRisks = (result, risks) => result + (result * (risks / 100));
 const getTestingTimeWithoutRisks = (fields) => getTestingExecutionTime(fields)

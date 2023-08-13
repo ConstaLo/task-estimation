@@ -40,7 +40,7 @@ formCommon.addEventListener('submit', (event) => {
 
     const testingCreationTimeWithoutRisks = (fields.testCasesCount * fields.creationTimeForOneTC) + fields.testPlanCreationTime;
     const testingExecutionTimeWithoutRisks = getTestingTimeWithoutRisks(fields);
-    const testingTime = (testingCreationTimeWithoutRisks + testingExecutionTimeWithoutRisks) / fields.teamMembersCount;
+    const testingTime = (testingCreationTimeWithoutRisks + testingExecutionTimeWithoutRisks + fields.requirementAnalysisTime) / fields.teamMembersCount;
     const resultWithoutRisks = testingTime + fields.envInstallationTime + fields.buildInstallationTime;
 
     const result = getResultWithRisks(getResultWithRisks(resultWithoutRisks, fields.communicationTimePercent), fields.risksPercent);
@@ -65,4 +65,5 @@ const getAdditionalValues = () => ({
     envInstallationTime: +document.getElementById('env-install-time').value,
     buildInstallationTime: (+document.getElementById('build-install-time').value) / 60,
     communicationTimePercent: +document.getElementById('communication-time').value,
+    requirementAnalysisTime: +document.getElementById('requirements-analysis').value,
 })
